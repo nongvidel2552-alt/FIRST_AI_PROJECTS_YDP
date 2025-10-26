@@ -1,5 +1,5 @@
 # ===============================
-# 🧪 1. Load & Basic Exploration
+# 🧪 Load & Basic Exploration
 # ===============================
 import pandas as pd
 import numpy as np
@@ -30,8 +30,11 @@ print(df.describe()) #View basic statistics for all numeric columns.
 # 🧠 EDA
 # 🎯 Find out which column "affect" staying/exited
 # ======================================================
+#  parse Categorical / Numeric Because the goals are different
+# - Categorical: Group distribution
+# - Numeric: min / max / mean / numbers
 
-# 📊 2. Categorical Analysis
+# 📊 1. Categorical Analysis
 # ===============================
 
 # The column that is “text” No number,mean,max,min
@@ -42,7 +45,7 @@ for col in categorical_cols:
     print(df.groupby([col, 'Exited']).size())
 
 
-# 📈 3. Numeric Analysis
+# 📈 2. Numeric Analysis
 # ===============================
 
 # Let's look at the mean, max, and min values of the important columns to see how they affect usability.
@@ -59,11 +62,11 @@ numeric_cols = [
     'HasCrCard', 'IsActiveMember', 'EstimatedSalary', 'Satisfaction Score','Complain', 'Point Earned'
 ]
 
-print("📊 สถิติของคอลัมน์ตัวเลข (numeric)")
+print("📊 Statistics of numeric columns (numeric)")
 print(df.groupby('Exited')[numeric_cols].agg(['min','max','mean']))
 
 
-# 🔥 4. Data Visualization
+# 🔥 3. Data Visualization
 # ===============================
 
 # Graph the data to make it easier to decide on column selection.
