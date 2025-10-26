@@ -11,6 +11,12 @@
 - เป้าหมาย (Target): `Exited` — 0 = อยู่, 1 = ออก
 
 ---
+Tech stacks
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
 
 ## 🔍 Workflow
 1. **EDA (Exploratory Data Analysis)**  
