@@ -11,7 +11,7 @@
 - เป้าหมาย (Target): `Exited` — 0 = อยู่, 1 = ออก
 
 ---
-Tech stacks
+Tech stacks:
 pandas
 numpy
 matplotlib
